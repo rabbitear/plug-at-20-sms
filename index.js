@@ -23,10 +23,9 @@ app.post('/', function(req, res, next) {
     var message = req.body.Body
     var phone_number = req.body.From
 
-// Comfirmation message
+    // Comfirmation message
     return res.send(text.CONFIRMATION_MESSAGE)
 });
-
 
 // start the server
 var port = process.env.PORT || 3000
