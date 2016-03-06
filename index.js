@@ -23,24 +23,9 @@ app.use(body_parser.urlencoded({ extended: true }))
 app.post('/', function(req, res, next) {
     var message = req.body.Body
     var phone_number = req.body.From
-    var zipcode_regex = /^\d{5}(?:[-\s]\d{4})?$/
-    var zip = null
 
-    var match = message.match(zipcode_regex)
-    if (match) zip = match[0]
-
-    // if they sent a zipcode
-    if (zip) {
-        db('subscribers').push({
-            phone: phone_number,
-            zip: zip,
-        })
-        return res.send(text.CONFIRMATION_MESSAGE)
-    }
-    // else just say Hello
-    else {
-        return res.send(text.WELCOME_MESSAGE)
-    }
+// Comfirmation message
+    return res.send(text.CONFIRMATION_MESSAGE)
 });
 
 
