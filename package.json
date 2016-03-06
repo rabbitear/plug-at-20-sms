@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/codeforanchorage/plug-at-20-sms#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "lowdb": "^0.12.5",
     "twilio": "^2.9.0"

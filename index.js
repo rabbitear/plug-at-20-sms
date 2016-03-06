@@ -1,6 +1,8 @@
 // 3rd party library imports
 var express = require('express')
 var low = require('lowdb')
+var storage = require('lowdb/file-sync')
+var body_parser = require('body-parser')
 
 // project imports
 var text = require('./message_text.json')
@@ -8,10 +10,12 @@ var text = require('./message_text.json')
 var NOTIFICATION_TIME = '8' // 8 pm
 
 var app = express() // instantiate express
-var db = low('./db.json'); // instantiate database
+var db = low('db.json', { storage }); // instantiate database
 
 // serve files from the public dir for testing via web
 app.get('/', express.static(__dirname + '/public'))
+// parse POST bodies
+app.use(body_parser.urlencoded({ extended: true }))
 
 // Twilio hits this endpoint. The user's text message is
 app.post('/', function(req, res, next) {
@@ -25,7 +29,10 @@ app.post('/', function(req, res, next) {
 
     // if they sent a zipcode
     if (zip) {
-        db.push(phone_number)
+        db('subscribers').push({
+            phone: phone_number,
+            zip: zip,
+        })
         return res.send(text.CONFIRMATION_MESSAGE)
     }
     // else just say Hello
