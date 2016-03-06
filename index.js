@@ -2,17 +2,16 @@
 
 // 3rd party library imports
 var express = require('express')
-var low = require('lowdb')
 var storage = require('lowdb/file-sync')
 var body_parser = require('body-parser')
 
 // project imports
 var text = require('./message_text.json')
 var cron_job = require('./cron_job')
+var db = require('./db')
 
 
 var app = express() // instantiate express
-var db = low('db.json', { storage }); // instantiate database
 
 
 // serve files from the public dir for testing via web
