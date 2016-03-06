@@ -1,3 +1,5 @@
+'use strict'
+
 // 3rd party library imports
 var express = require('express')
 var low = require('lowdb')
@@ -6,11 +8,12 @@ var body_parser = require('body-parser')
 
 // project imports
 var text = require('./message_text.json')
+var cron_job = require('./cron_job')
 
-var NOTIFICATION_TIME = '8' // 8 pm
 
 var app = express() // instantiate express
 var db = low('db.json', { storage }); // instantiate database
+
 
 // serve files from the public dir for testing via web
 app.get('/', express.static(__dirname + '/public'))
@@ -47,3 +50,6 @@ var port = process.env.PORT || 3000
 app.listen(port, function () {
   console.log('plug at 20 app running on port', port);
 });
+
+// start the cron job
+cron_job.start()

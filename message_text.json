@@ -1,4 +1,4 @@
 {
     "WELCOME_MESSAGE": "Hello there, just send me your zipcode and I'll send you a evening reminder to plug in your car before a cold night.",
-    "CONFIRMATION_MESSAGE": "Alrighty, you're signed up."
+    "CONFIRMATION_MESSAGE": "Alrighty, you're signed up. Send STOP if you want the messages to stop and START if you change your mind."
 }
