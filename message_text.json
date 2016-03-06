@@ -1,3 +1,4 @@
 {
-    "CONFIRMATION_MESSAGE": "Alrighty, you're signed up. Send STOP if you want the messages to stop and START if you change your mind."
+    "CONFIRMATION": "Alrighty, you're signed up. Send STOP if you want the messages to stop and START if you change your mind.",
+    "NOTIFICATION": "It's going to be cold tonight. Plug your car in!"
 }
