@@ -1,0 +1,25 @@
+{
+  "name": "plug-at-20-sms",
+  "version": "1.0.0",
+  "description": "Sends SMS reminders to plug in your car when the temp drops below 20",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeforanchorage/plug-at-20-sms.git"
+  },
+  "author": "Nigel Kibodeaux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeforanchorage/plug-at-20-sms/issues"
+  },
+  "homepage": "https://github.com/codeforanchorage/plug-at-20-sms#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "lowdb": "^0.12.5",
+    "twilio": "^2.9.0"
+  }
+}
