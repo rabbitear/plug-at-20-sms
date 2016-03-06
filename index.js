@@ -2,7 +2,6 @@
 
 // 3rd party library imports
 var express = require('express')
-var storage = require('lowdb/file-sync')
 var body_parser = require('body-parser')
 
 // project imports
