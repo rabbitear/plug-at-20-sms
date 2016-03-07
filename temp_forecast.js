@@ -10,31 +10,7 @@ var LOW_TEMP_END_HOUR = '03' // 3am
 
 // these are all the zipcodes in anchorage that can have weather (there are some
 // weird ones that make the weather API error)
-var ZIPCODES = [
-    '99501',
-    '99502',
-    '99503',
-    '99504',
-    '99507',
-    '99508',
-    '99509',
-    '99510',
-    '99511',
-    '99513',
-    '99514',
-    '99515',
-    '99516',
-    '99517',
-    '99518',
-    '99519',
-    '99520',
-    '99521',
-    '99522',
-    '99523',
-    '99524',
-    '99599',
-    '99695'
-]
+var ZIPCODES = require('./zipcodes')
 
 function getWeatherUrl() {
     var d = new Date()

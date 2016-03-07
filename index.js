@@ -8,6 +8,7 @@ var body_parser = require('body-parser')
 var text = require('./message_text.json')
 var cron_job = require('./cron_job')
 var db = require('./db')
+var ZIPCODES = require('./zipcodes')
 
 
 var app = express() // instantiate express
@@ -18,7 +19,7 @@ app.get('/', express.static(__dirname + '/public'))
 // parse POST bodies
 app.use(body_parser.urlencoded({ extended: true }))
 
-// Twilio hits this endpoint. The user's text message is
+// Twilio hits this endpoint
 app.post('/', function(req, res, next) {
     var message = req.body.Body
     var phone_number = req.body.From
@@ -30,15 +31,20 @@ app.post('/', function(req, res, next) {
 
     // if they sent a zipcode
     if (zip) {
-        db('subscribers').push({
-            phone: phone_number,
-            zip: zip,
-        })
-        return res.send(text.CONFIRMATION_MESSAGE)
+        if (ZIPCODES.indexOf(zip) > -1) {
+            db('subscribers').push({
+                phone: phone_number,
+                zip: zip,
+            })
+            return res.send(text.CONFIRMATION)
+        }
+        else {
+            return res.send(text.BAD_ZIP)
+        }
     }
     // else just say Hello
     else {
-        return res.send(text.WELCOME_MESSAGE)
+        return res.send(text.WELCOME)
     }
 });
 
