@@ -22,18 +22,30 @@ app.use(body_parser.urlencoded({ extended: true }))
 app.post('/', function(req, res, next) {
     var message = req.body.Body
     var phone_number = req.body.From
+    var zipcode_regex = /^\d{5}(?:[-\s]\d{4})?$/
+    var zip = null
 
-    // add number to the subscribers list
-    db('subscribers').push(phone_number)
+    var match = message.match(zipcode_regex)
+    if (match) zip = match[0]
 
-    // Comfirmation message
-    return res.send(text.CONFIRMATION_MESSAGE)
+    // if they sent a zipcode
+    if (zip) {
+        db('subscribers').push({
+            phone: phone_number,
+            zip: zip,
+        })
+        return res.send(text.CONFIRMATION_MESSAGE)
+    }
+    // else just say Hello
+    else {
+        return res.send(text.WELCOME_MESSAGE)
+    }
 });
 
 // start the server
 var port = process.env.PORT || 3000
 app.listen(port, function () {
-  console.log('plug at 20 app running on port', port);
+  console.log('plug-at-20 app running on port', port);
 });
 
 // start the cron job
