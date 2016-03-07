@@ -2,6 +2,7 @@
     "WELCOME": "Hello there, just send me your zipcode and I'll send you an evening reminder to plug in your car if it'll be a cold night.",
     "BAD_ZIP": "Your zip code isn't in Anchorage and the thing is that we only know about the weather in Anchorage. Sorry, we can't help you.",
     "CONFIRMATION": "Alrighty, you're signed up. Send STOP if you want the messages to stop and START if you change your mind after stopping.",
+    "INSTRUCTIONS": "Sorry, I don't know what you want. Send STOP if you want the messages to stop and START if you change your mind after stopping.",
     "NOTIFICATIONS": [
         "It's going to be cold tonight, don't forget to plug your car in.",
         "Brrrr, plug that car in tonight.",

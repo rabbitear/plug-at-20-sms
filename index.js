@@ -42,6 +42,15 @@ app.post('/', function(req, res, next) {
             return res.send(text.BAD_ZIP)
         }
     }
+    // if we know this number, what the hell are they trying to tell us?
+    else if (db('subscribers').indexOf(phone_number) > -1) {
+        // log the message, maybe it's interesting
+        db('unknown_commands').push({
+            phone: phone_number,
+            message: message,
+        })
+        return res.send(text.INSTRUCTIONS)
+    }
     // else just say Hello
     else {
         return res.send(text.WELCOME)
