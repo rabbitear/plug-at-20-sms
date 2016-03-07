@@ -23,6 +23,9 @@ app.post('/', function(req, res, next) {
     var message = req.body.Body
     var phone_number = req.body.From
 
+    // add number to the subscribers list
+    db('subscribers').push(phone_number)
+
     // Comfirmation message
     return res.send(text.CONFIRMATION_MESSAGE)
 });

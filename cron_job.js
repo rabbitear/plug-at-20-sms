@@ -19,21 +19,23 @@ var TWILIO_NUMBER = '+19073316688'
 var job = new cron.CronJob({
     // run every day at the hour specified above
     cronTime: '0 ' + NOTIFICATION_TIME + ' * * *',
+    // cronTime: '* * * * *', // every minute
     onTick: sendMessages,
     timeZone: 'America/Anchorage'
 });
 
 
 function sendMessages() {
-    console.log('sending', db.subscribers.length, 'text messages')
+    console.log('sending', db('subscribers').length, 'text messages')
 
     // instantiating this here so it'll run without an auth token in dev
     var twilio_client = twilio(TWILIO_SID, TWILIO_AUTH_TOKEN);
 
-    db.subscribers.forEach(function(number) {
-        twilio.sendMessage(
+    db('subscribers').forEach(function(subscriber) {
+        console.log(subscriber)
+        twilio_client.sendMessage(
             {
-                to: number,
+                to: subscriber,
                 from: TWILIO_NUMBER,
                 body: message_text.NOTIFICATION,
             },
