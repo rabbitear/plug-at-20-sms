@@ -37,7 +37,7 @@ function sendMessages() {
             {
                 to: subscriber,
                 from: TWILIO_NUMBER,
-                body: message_text.NOTIFICATION,
+                body: randomElement(message_text.NOTIFICATIONS),
             },
             function (err, response) {
                 if (err) return console.log(err)
@@ -46,6 +46,11 @@ function sendMessages() {
             }
         )
     })
+}
+
+
+function randomElement(items) {
+    return items[Math.floor(Math.random()*items.length)]
 }
 
 module.exports = job
