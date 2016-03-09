@@ -33,6 +33,10 @@ app.post('/', function(req, res, next) {
     var match = message.match(zipcode_regex)
     if (match) zip = match[0]
 
+    var is_subscriber = db('subscribers').find(function(item) {
+        return item.phone == phone_number
+    })
+
     // if they sent a zipcode
     if (zip) {
         if (ZIPCODES.indexOf(zip) > -1) {
@@ -47,7 +51,7 @@ app.post('/', function(req, res, next) {
         }
     }
     // if we know this number, what the hell are they trying to tell us?
-    else if (db('subscribers').indexOf(phone_number) > -1) {
+    else if (is_subscriber) {
         // log the message, maybe it's interesting
         db('unknown_commands').push({
             phone: phone_number,
