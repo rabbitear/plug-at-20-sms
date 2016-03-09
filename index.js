@@ -6,7 +6,7 @@ var body_parser = require('body-parser')
 
 // project imports
 var text = require('./message_text.json')
-var cron_job = require('./cron_job')
+var cron_job = require('./cron_job').job
 var db = require('./db')
 var ZIPCODES = require('./zipcodes')
 
@@ -18,6 +18,7 @@ var app = express() // instantiate express
 app.get('/', express.static(__dirname + '/public'))
 // parse POST bodies
 app.use(body_parser.urlencoded({ extended: true }))
+
 
 // Twilio hits this endpoint
 app.post('/', function(req, res, next) {
@@ -57,11 +58,13 @@ app.post('/', function(req, res, next) {
     }
 });
 
+
 // start the server
 var port = process.env.PORT || 3000
 app.listen(port, function () {
   console.log('plug-at-20 app running on port', port);
 });
+
 
 // start the cron job
 cron_job.start()

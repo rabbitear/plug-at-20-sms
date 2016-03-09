@@ -90,19 +90,17 @@ function getLowTemps(callback) {
 
 
 function getTempsFromWeatherData(data, callback) {
-    var temps
+    var temps = {}
 
     parseString(data, function (err, result) {
         if (err) return callback(err)
 
-        var temps = ZIPCODES.map(function(zip, i) {
-            return {
-                zip: zip,
-                temp: result.dwml.data[0].parameters[i].temperature[0].value[0],
-            }
+        ZIPCODES.forEach(function(zip, i) {
+            var t = result.dwml.data[0].parameters[i].temperature[0].value[0]
+            temps[zip] = parseInt(t)
         })
 
-        callback(temps)
+        callback(null, temps)
     })
 }
 
