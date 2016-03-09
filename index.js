@@ -27,6 +27,9 @@ app.post('/', function(req, res, next) {
     var zipcode_regex = /^\d{5}(?:[-\s]\d{4})?$/
     var zip = null
 
+    // this is necessary
+    res.set('Content-Type', 'text/plain');
+
     var match = message.match(zipcode_regex)
     if (match) zip = match[0]
 
