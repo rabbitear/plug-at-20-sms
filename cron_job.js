@@ -12,7 +12,7 @@ var forecast = require('./temp_forecast')
 
 // constants
 var NOTIFICATION_TIME = 20 // 8 pm
-var NOTIFICATION_TEMPERATURE = 30
+var NOTIFICATION_TEMPERATURE = 20
 var TWILIO_SID = 'AC4d903012a56c8cba55657d6f9520846e'
 var TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN
 var TWILIO_NUMBER = '+19073316688'
