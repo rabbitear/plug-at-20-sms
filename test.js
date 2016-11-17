@@ -9,7 +9,7 @@ var forecast = require('./temp_forecast')
 
 
 // Really basic test just to make sure the zipcodes don't error
-forecast.getLowTemps((err, data) => {
+forecast.getLowTemps(function(err, data) {
     if (err) throw err
 
     // console.dir(data, {depth:5, color:true})
