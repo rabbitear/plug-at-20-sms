@@ -66,6 +66,14 @@ app.post('/', function(req, res, next) {
 });
 
 
+// error handlers
+app.use(rollbar.errorHandler(process.env.ROLLBAR_TOKEN));
+rollbar.handleUncaughtExceptionsAndRejections(
+    process.env.ROLLBAR_TOKEN,
+    {exitOnUncaughtException: true}
+);
+
+
 // start the server
 var port = process.env.PORT || 3000
 app.listen(port, function () {
