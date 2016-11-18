@@ -3,6 +3,7 @@
 // 3rd party library imports
 var express = require('express')
 var body_parser = require('body-parser')
+var rollbar = require("rollbar")
 
 // project imports
 var text = require('./message_text.json')
