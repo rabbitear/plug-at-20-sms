@@ -14,3 +14,6 @@ forecast.getLowTemps(function(err, data) {
 
     // console.dir(data, {depth:5, color:true})
 })
+
+// Super basic test to make sure the messages.json file is valid
+require('./message_text.json')
