@@ -3,6 +3,8 @@
 // 3rd party library imports
 var cron = require('cron')
 var twilio = require('twilio')
+var rollbar = require("rollbar")
+rollbar.init(process.env.ROLLBAR_TOKEN)
 
 // project imports
 var db = require('./db')
@@ -29,11 +31,11 @@ var job = new cron.CronJob({
 
 function sendMessages() {
     // instantiating this here so it'll run without an auth token in dev
-    var twilio_client = twilio(TWILIO_SID, TWILIO_AUTH_TOKEN);
+    var twilio_client = twilio(TWILIO_SID, TWILIO_AUTH_TOKEN)
 
     // get weather
     forecast.getLowTemps(function(err, data) {
-        if (err) return console.log(err)
+        if (err) return rollbar.handleError(err)
 
         db('subscribers').forEach(function(subscriber) {
             console.log(subscriber)
@@ -45,7 +47,7 @@ function sendMessages() {
                         body: randomElement(message_text.NOTIFICATIONS),
                     },
                     function (err, response) {
-                        if (err) return console.log(err)
+                        if (err) return rollbar.handleError(err)
 
                         console.log(response)
                     }
