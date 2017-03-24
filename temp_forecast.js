@@ -1,6 +1,6 @@
 'use strict'
 
-var request = require('request')
+var request = require('requestretry');
 var parseString = require('xml2js').parseString;
 
 // the weather service delivers forecasts in 3 hour blocks
@@ -75,6 +75,8 @@ function getWeatherUrl() {
 function getLowTemps(callback) {
     let options = {
         url: getWeatherUrl(),
+        maxAttempts: 5,   // (default) try 5 times 
+        retryDelay: 2000,  // (default) wait for 5s before trying again 
         headers: {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
         }

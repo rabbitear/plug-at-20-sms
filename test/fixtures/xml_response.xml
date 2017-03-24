@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<dwml version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.nws.noaa.gov/forecasts/xml/DWMLgen/schema/DWML.xsd">
+  <head>
+    <product srsName="WGS 1984" concise-name="time-series" operational-mode="official">
+      <title>NOAA's National Weather Service Forecast Data</title>
+      <field>meteorological</field>
+      <category>forecast</category>
+      <creation-date refresh-frequency="PT1H">2017-03-23T22:39:24Z</creation-date>
+    </product>
+    <source>
+      <more-information>http://www.nws.noaa.gov/forecasts/xml/</more-information>
+      <production-center>Meteorological Development Laboratory<sub-center>Product Generation Branch</sub-center></production-center>
+      <disclaimer>http://www.nws.noaa.gov/disclaimer.html</disclaimer>
+      <credit>http://www.weather.gov/</credit>
+      <credit-logo>http://www.weather.gov/images/xml_logo.gif</credit-logo>
+      <feedback>http://www.weather.gov/feedback.php</feedback>
+    </source>
+  </head>
+  <data>
+    <location>
+      <location-key>point1</location-key>
+      <point latitude="61.22" longitude="-149.85"/>
+    </location>
+    <location>
+      <location-key>point2</location-key>
+      <point latitude="61.16" longitude="-149.99"/>
+    </location>
+    <location>
+      <location-key>point3</location-key>
+      <point latitude="61.19" longitude="-149.89"/>
+    </location>
+    <location>
+      <location-key>point4</location-key>
+      <point latitude="61.18" longitude="-149.64"/>
+    </location>
+    <location>
+      <location-key>point5</location-key>
+      <point latitude="61.15" longitude="-149.77"/>
+    </location>
+    <location>
+      <location-key>point6</location-key>
+      <point latitude="61.21" longitude="-149.82"/>
+    </location>
+    <location>
+      <location-key>point7</location-key>
+      <point latitude="61.18" longitude="-149.88"/>
+    </location>
+    <location>
+      <location-key>point8</location-key>
+      <point latitude="61.22" longitude="-149.88"/>
+    </location>
+    <location>
+      <location-key>point9</location-key>
+      <point latitude="61.12" longitude="-149.86"/>
+    </location>
+    <location>
+      <location-key>point10</location-key>
+      <point latitude="61.21" longitude="-149.88"/>
+    </location>
+    <location>
+      <location-key>point11</location-key>
+      <point latitude="61.21" longitude="-149.83"/>
+    </location>
+    <location>
+      <location-key>point12</location-key>
+      <point latitude="61.11" longitude="-149.90"/>
+    </location>
+    <location>
+      <location-key>point13</location-key>
+      <point latitude="61.08" longitude="-149.71"/>
+    </location>
+    <location>
+      <location-key>point14</location-key>
+      <point latitude="61.19" longitude="-149.94"/>
+    </location>
+    <location>
+      <location-key>point15</location-key>
+      <point latitude="61.16" longitude="-149.89"/>
+    </location>
+    <location>
+      <location-key>point16</location-key>
+      <point latitude="61.19" longitude="-149.99"/>
+    </location>
+    <location>
+      <location-key>point17</location-key>
+      <point latitude="61.21" longitude="-149.87"/>
+    </location>
+    <location>
+      <location-key>point18</location-key>
+      <point latitude="61.20" longitude="-149.75"/>
+    </location>
+    <location>
+      <location-key>point19</location-key>
+      <point latitude="61.15" longitude="-149.92"/>
+    </location>
+    <location>
+      <location-key>point20</location-key>
+      <point latitude="61.17" longitude="-149.84"/>
+    </location>
+    <location>
+      <location-key>point21</location-key>
+      <point latitude="61.19" longitude="-149.89"/>
+    </location>
+    <location>
+      <location-key>point22</location-key>
+      <point latitude="61.22" longitude="-149.87"/>
+    </location>
+    <location>
+      <location-key>point23</location-key>
+      <point latitude="61.21" longitude="-149.26"/>
+    </location>
+    <location>
+      <location-key>point24</location-key>
+      <point latitude="61.45" longitude="-150.63"/>
+    </location>
+    <location>
+      <location-key>point25</location-key>
+      <point latitude="61.46" longitude="-150.10"/>
+    </location>
+    <location>
+      <location-key>point26</location-key>
+      <point latitude="61.66" longitude="-149.68"/>
+    </location>
+    <location>
+      <location-key>point27</location-key>
+      <point latitude="61.61" longitude="-148.47"/>
+    </location>
+    <location>
+      <location-key>point28</location-key>
+      <point latitude="61.94" longitude="-151.74"/>
+    </location>
+    <location>
+      <location-key>point29</location-key>
+      <point latitude="61.86" longitude="-148.30"/>
+    </location>
+    <location>
+      <location-key>point30</location-key>
+      <point latitude="62.43" longitude="-148.77"/>
+    </location>
+    <location>
+      <location-key>point31</location-key>
+      <point latitude="62.70" longitude="-151.08"/>
+    </location>
+    <location>
+      <location-key>point32</location-key>
+      <point latitude="61.52" longitude="-149.57"/>
+    </location>
+    <location>
+      <location-key>point33</location-key>
+      <point latitude="61.36" longitude="-150.08"/>
+    </location>
+    <location>
+      <location-key>point34</location-key>
+      <point latitude="61.90" longitude="-149.74"/>
+    </location>
+    <moreWeatherInformation applicable-location="point1">http://forecast.weather.gov/MapClick.php?textField1=61.22&amp;textField2=-149.85</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point2">http://forecast.weather.gov/MapClick.php?textField1=61.16&amp;textField2=-149.99</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point3">http://forecast.weather.gov/MapClick.php?textField1=61.19&amp;textField2=-149.89</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point4">http://forecast.weather.gov/MapClick.php?textField1=61.18&amp;textField2=-149.64</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point5">http://forecast.weather.gov/MapClick.php?textField1=61.15&amp;textField2=-149.77</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point6">http://forecast.weather.gov/MapClick.php?textField1=61.21&amp;textField2=-149.82</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point7">http://forecast.weather.gov/MapClick.php?textField1=61.18&amp;textField2=-149.88</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point8">http://forecast.weather.gov/MapClick.php?textField1=61.22&amp;textField2=-149.88</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point9">http://forecast.weather.gov/MapClick.php?textField1=61.12&amp;textField2=-149.86</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point10">http://forecast.weather.gov/MapClick.php?textField1=61.21&amp;textField2=-149.88</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point11">http://forecast.weather.gov/MapClick.php?textField1=61.21&amp;textField2=-149.83</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point12">http://forecast.weather.gov/MapClick.php?textField1=61.11&amp;textField2=-149.90</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point13">http://forecast.weather.gov/MapClick.php?textField1=61.08&amp;textField2=-149.71</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point14">http://forecast.weather.gov/MapClick.php?textField1=61.19&amp;textField2=-149.94</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point15">http://forecast.weather.gov/MapClick.php?textField1=61.16&amp;textField2=-149.89</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point16">http://forecast.weather.gov/MapClick.php?textField1=61.19&amp;textField2=-149.99</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point17">http://forecast.weather.gov/MapClick.php?textField1=61.21&amp;textField2=-149.87</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point18">http://forecast.weather.gov/MapClick.php?textField1=61.20&amp;textField2=-149.75</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point19">http://forecast.weather.gov/MapClick.php?textField1=61.15&amp;textField2=-149.92</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point20">http://forecast.weather.gov/MapClick.php?textField1=61.17&amp;textField2=-149.84</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point21">http://forecast.weather.gov/MapClick.php?textField1=61.19&amp;textField2=-149.89</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point22">http://forecast.weather.gov/MapClick.php?textField1=61.22&amp;textField2=-149.87</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point23">http://forecast.weather.gov/MapClick.php?textField1=61.21&amp;textField2=-149.26</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point24">http://forecast.weather.gov/MapClick.php?textField1=61.45&amp;textField2=-150.63</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point25">http://forecast.weather.gov/MapClick.php?textField1=61.46&amp;textField2=-150.10</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point26">http://forecast.weather.gov/MapClick.php?textField1=61.66&amp;textField2=-149.68</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point27">http://forecast.weather.gov/MapClick.php?textField1=61.61&amp;textField2=-148.47</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point28">http://forecast.weather.gov/MapClick.php?textField1=61.94&amp;textField2=-151.74</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point29">http://forecast.weather.gov/MapClick.php?textField1=61.86&amp;textField2=-148.30</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point30">http://forecast.weather.gov/MapClick.php?textField1=62.43&amp;textField2=-148.77</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point31">http://forecast.weather.gov/MapClick.php?textField1=62.70&amp;textField2=-151.08</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point32">http://forecast.weather.gov/MapClick.php?textField1=61.52&amp;textField2=-149.57</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point33">http://forecast.weather.gov/MapClick.php?textField1=61.36&amp;textField2=-150.08</moreWeatherInformation>
+    <moreWeatherInformation applicable-location="point34">http://forecast.weather.gov/MapClick.php?textField1=61.90&amp;textField2=-149.74</moreWeatherInformation>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p3h-n2-1</layout-key>
+      <start-valid-time>2017-03-24T01:00:00-08:00</start-valid-time>
+      <start-valid-time>2017-03-24T04:00:00-08:00</start-valid-time>
+    </time-layout>
+    <parameters applicable-location="point1">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>16</value>
+        <value>13</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point2">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>16</value>
+        <value>13</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point3">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point4">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>12</value>
+        <value>8</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point5">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>13</value>
+        <value>9</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point6">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>11</value>
+        <value>6</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point7">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point8">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>16</value>
+        <value>13</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point9">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>14</value>
+        <value>10</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point10">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point11">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>11</value>
+        <value>6</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point12">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>14</value>
+        <value>10</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point13">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>10</value>
+        <value>7</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point14">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point15">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>14</value>
+        <value>10</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point16">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>16</value>
+        <value>13</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point17">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>16</value>
+        <value>13</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point18">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>11</value>
+        <value>6</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point19">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>14</value>
+        <value>10</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point20">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point21">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point22">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>16</value>
+        <value>13</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point23">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>7</value>
+        <value>5</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point24">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>13</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point25">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>17</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point26">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>13</value>
+        <value>9</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point27">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>11</value>
+        <value>9</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point28">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>13</value>
+        <value>9</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point29">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>9</value>
+        <value>7</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point30">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>4</value>
+        <value>1</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point31">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>8</value>
+        <value>7</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point32">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>15</value>
+        <value>11</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point33">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>16</value>
+        <value>12</value>
+      </temperature>
+    </parameters>
+    <parameters applicable-location="point34">
+      <temperature type="hourly" units="Fahrenheit" time-layout="k-p3h-n2-1">
+        <name>Temperature</name>
+        <value>12</value>
+        <value>9</value>
+      </temperature>
+    </parameters>
+  </data>
+</dwml>
