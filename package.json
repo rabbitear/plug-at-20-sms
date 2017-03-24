@@ -22,7 +22,6 @@
     "chai": "^3.5.0",
     "cron": "^1.1.0",
     "express": "^4.13.4",
-    "fs": "0.0.1-security",
     "lowdb": "^0.12.5",
     "nock": "^9.0.9",
     "requestretry": "^1.12.0",
