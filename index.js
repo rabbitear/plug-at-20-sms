@@ -63,8 +63,7 @@ app.post('/', function(req, res, next) {
             message: message,
         })
         // decode URI encodings, setup the messages.
-        var decoded_msg = decodeURIComponent(message)
-        var fallback_msg = "FROM: " + phone_number + " - " + decoded_msg
+        var fallback_msg = "FROM: " + phone_number + " - " + message
         var title_msg = "FROM: " + phone_number
         request.post(SLACK_WEBHOOK).form(JSON.stringify({
             "username":"Citizen Feedback",
@@ -72,7 +71,7 @@ app.post('/', function(req, res, next) {
                 {
                     "fallback": fallback_msg,
                     "title": title_msg,
-                    "text": decoded_msg
+                    "text": message
                 }
             ]
         }))
