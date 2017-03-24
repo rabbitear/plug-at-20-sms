@@ -4,12 +4,16 @@
 var express = require('express')
 var body_parser = require('body-parser')
 var rollbar = require("rollbar")
+var request = require("request")
 
 // project imports
 var text = require('./message_text.json')
 var cron_job = require('./cron_job').job
 var db = require('./db')
 var ZIPCODES = require('./zipcodes')
+
+// Slack Webhook Token
+var SLACK_WEBHOOK = process.env.SLACK_WEBHOOK
 
 
 var app = express() // instantiate express
@@ -58,6 +62,10 @@ app.post('/', function(req, res, next) {
             phone: phone_number,
             message: message,
         })
+        request.post(SLACK_WEBHOOK).form(JSON.stringify({
+            "username":"citizen",
+            "text":message
+        }))
         return res.send(text.INSTRUCTIONS)
     }
     // else just say Hello
