@@ -4,7 +4,7 @@
   "description": "Sends SMS reminders to plug in your car when the temp drops below 20",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
+    "test": "mocha test",
     "start": "node index"
   },
   "repository": {
@@ -29,5 +29,8 @@
     "rollbar": "^0.6.2",
     "twilio": "^2.9.0",
     "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }

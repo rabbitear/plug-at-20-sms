@@ -5,7 +5,7 @@ var cron = require('cron')
 var twilio = require('twilio')
 
 // project imports
-var forecast = require('./temp_forecast')
+var forecast = require('../temp_forecast')
 
 
 // Really basic test just to make sure the zipcodes don't error
@@ -16,4 +16,4 @@ forecast.getLowTemps(function(err, data) {
 })
 
 // Super basic test to make sure the messages.json file is valid
-require('./message_text.json')
+require('../message_text.json')
