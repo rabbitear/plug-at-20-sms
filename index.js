@@ -62,7 +62,7 @@ app.post('/', function(req, res, next) {
             phone: phone_number,
             message: message,
         })
-        // decode URI encodings, setup the messages.
+        // setup and send unknown command to slack feedback channel.
         var fallback_msg = "FROM: " + phone_number + " - " + message
         var title_msg = "FROM: " + phone_number
         request.post(SLACK_WEBHOOK).form(JSON.stringify({
